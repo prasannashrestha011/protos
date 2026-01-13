@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.6.0
 // - protoc             (unknown)
-// source: proto/email.proto
+// source: proto/email/email.proto
 
 package v1
 
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	EmailService_SendEmail_FullMethodName = "/gen.email.v1.EmailService/SendEmail"
+	EmailService_SendEmail_FullMethodName = "/email.v1.EmailService/SendEmail"
 )
 
 // EmailServiceClient is the client API for EmailService service.
@@ -108,7 +108,7 @@ func _EmailService_SendEmail_Handler(srv interface{}, ctx context.Context, dec f
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var EmailService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "gen.email.v1.EmailService",
+	ServiceName: "email.v1.EmailService",
 	HandlerType: (*EmailServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var EmailService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "proto/email.proto",
+	Metadata: "proto/email/email.proto",
 }
